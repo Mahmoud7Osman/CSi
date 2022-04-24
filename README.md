@@ -6,7 +6,7 @@ Receive Keystrokes Remotely From The Remote Cran Keylogger Then Live Display it 
 Parse Cran Keystrokes From A File
 <pre>python3 csi.py parse [Keystrokes.txt] </pre>
 # Basically What is The ... ?
-What is The Remote Cran Keylogger And The Offline Cran Keylogger ?
+<h3>What is The Remote Cran Keylogger And The Offline Cran Keylogger ?</h3>
 <strong>Answer:</strong>When You Or Your Victim Don't Have Access To The Internet (Or No Port Forwarding Available) You Can Use The Offline Keylogger, It works by saving all keystrokes on victim's Machine, Then You Can Get All Keystrokes By Plugging A USB Storage Device Containing An Empty File Named <strong>cran.txt</strong> For 3 Seconds Then Unplugging It From Victim's Machine, This Will Automatically Notify The Cran Keylogger For Keystrokes, After That, The Cran Keylogger Will Self Destroy
 itself
 # Get the Cran Keylogger
