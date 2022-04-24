@@ -3,7 +3,7 @@ The Cran Keylogger Interface, use it at your own risk
 # Usage
 Receive Keystrokes Remotely From The Remote Cran Keylogger Then Live Display it (And Save it to a file)
 <pre>python3 csi.py receiver [Keystrokes.txt]</pre>
-Parse Cran Keystrokes From A File From The Offline Cran Keylogger
+Parse Cran Keystrokes From A File
 <pre>python3 csi.py parse [Keystrokes.txt] </pre>
 # Basically What is The ... ?
 What is The Remote Cran Keylogger And The Offline Cran Keylogger ?
